@@ -1,0 +1,155 @@
+WARNING: CPU does not support constant-rate rdtsc. Results obtained via rdtsc(p) may be inaccurate!
+[3] num_pages: 32768 (128 MiB), shape: 1.0000
+[1] num_pages: 32768 (128 MiB), shape: 1.0000
+[2] num_pages: 32768 (128 MiB), shape: 1.0000
+[4] num_pages: 32768 (128 MiB), shape: 1.0000
+[1] Pattern generation overhead: 0.0032 usec per drawing
+[2] Pattern generation overhead: 0.0032 usec per drawing
+[4] Pattern generation overhead: 0.0032 usec per drawing
+[3] Pattern generation overhead: 0.0050 usec per drawing
+[1] Starting main benchmark
+[4] Starting main benchmark
+[2] Starting main benchmark
+[3] Starting main benchmark
+[4] Benchmark done - took 30.000 sec for 251640000 page access
+  (Average 0.119 usec per page access)
+[1] Benchmark done - took 30.000 sec for 248820000 page access
+  (Average 0.121 usec per page access)
+[2] Benchmark done - took 30.001 sec for 245940000 page access
+  (Average 0.122 usec per page access)
+[3] Benchmark done - took 30.000 sec for 252890000 page access
+  (Average 0.119 usec per page access)
+All threads joined
+
+------------- Benchmark signature -------------
+pmbench version: pmbench 0.9 Linux 64bit +mt -nu -xa
+OS/kernel type : Linux 6.16.0-rc3-lizhijian-promotion+ x86_64
+Reported on    : Fri Jun 27 10:26:14 2025
+Benchmark UUID : 5ec52606-f50f-4c64-b49d-6316efe8f846
+Parameters used:
+  duration_sec = 30
+  mapsize_mib  = 4900
+  setsize_mib  = 128
+  initialize   = 0
+  zero         = 0
+  shape        = 1.000010
+  delay        = 0
+  quiet        = 0
+  cold         = 1
+  jobs         = 4
+  offset       = random
+  ratio        = 50%
+  threshold    = 0
+  wrneedsrd    = 0
+  pattern      = uniform
+  access       = histo
+  tsops        = rdtscp
+  shift_sec  = 0
+  pattern_shift = 0
+
+------------- Machine information -------------
+CPU model name: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz
+rdtsc/perfc frequency: 2000000 K cycles per second
+ -- TLB info --
+ -- Cache info --
+CACHE: 16MB 3rd, 64B line, 16-way
+CACHE: 2MB 2nd, 64B line, 8-way
+ICACHE: 32KB 1st, 64B line, 8-way
+DCACHE: 32KB 1st, 64B line, 8-way
+
+----------- Average access latency ------------
+Thread 1/4:
+Net average page latency (Arith. mean): 0.1174 us (234 clks)
+--- Measurement details ---
+  Page latency during benchmark (inc. gen): 0.1206 us (241 clks)
+    Total samples count: 248820000
+  Pattern generation overhead per drawing : 0.0032 us (6 clks)
+    Total samples count: 1000000
+Thread 2/4:
+Net average page latency (Arith. mean): 0.1188 us (237 clks)
+--- Measurement details ---
+  Page latency during benchmark (inc. gen): 0.1220 us (243 clks)
+    Total samples count: 245940000
+  Pattern generation overhead per drawing : 0.0032 us (6 clks)
+    Total samples count: 1000000
+Thread 3/4:
+Net average page latency (Arith. mean): 0.1137 us (227 clks)
+--- Measurement details ---
+  Page latency during benchmark (inc. gen): 0.1186 us (237 clks)
+    Total samples count: 252890000
+  Pattern generation overhead per drawing : 0.0050 us (9 clks)
+    Total samples count: 1000000
+Thread 4/4:
+Net average page latency (Arith. mean): 0.1161 us (232 clks)
+--- Measurement details ---
+  Page latency during benchmark (inc. gen): 0.1192 us (238 clks)
+    Total samples count: 251640000
+  Pattern generation overhead per drawing : 0.0032 us (6 clks)
+    Total samples count: 1000000
+
+----------------- Statistics ------------------
+# Access latency histogram
+Read:
+2^(00,08) ns: 487231314
+2^(08,09) ns: 10846304  [758651, 707718, 689458, 675438, 685478, 683710, 682437, 698152, 696326, 682076, 682390, 687562, 688378, 682810, 537546, 608174]
+2^(09,10) ns: 1468284  [784060, 469721, 130890, 45385, 19546, 9988, 4506, 1630, 716, 413, 320, 276, 215, 224, 163, 231]
+2^(10,11) ns: 20737  [383, 369, 509, 677, 900, 1104, 1307, 1274, 1161, 1115, 1724, 2317, 2442, 2205, 1812, 1438]
+2^(11,12) ns: 69600  [2407, 2134, 2467, 3147, 4376, 5978, 7103, 7640, 6676, 5268, 4514, 4027, 3680, 3332, 3227, 3624]
+2^(12,13) ns: 25764  [7497, 6757, 4652, 2785, 1539, 883, 506, 286, 229, 141, 129, 96, 86, 79, 52, 47]
+2^(13,14) ns: 381  [71, 70, 28, 36, 21, 38, 13, 16, 12, 14, 15, 12, 6, 8, 12, 9]
+2^(14,15) ns: 151  [12, 14, 17, 12, 11, 12, 7, 12, 10, 6, 9, 5, 7, 7, 6, 4]
+2^(15,16) ns: 47  [4, 5, 0, 1, 6, 2, 2, 3, 1, 2, 3, 1, 4, 1, 3, 9]
+2^(16,17) ns: 111  [23, 14, 14, 7, 6, 2, 5, 6, 7, 13, 6, 3, 2, 3, 0, 0]
+2^(17,18) ns: 68  [8, 14, 4, 3, 5, 6, 9, 4, 2, 2, 2, 3, 2, 0, 1, 3]
+2^(18,19) ns: 19  [3, 2, 2, 1, 3, 3, 0, 0, 0, 1, 2, 0, 0, 2, 0, 0]
+2^(19,20) ns: 90  [0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 71, 16]
+2^(20,21) ns: 187  [2, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 181, 2]
+2^(21,22) ns: 4730  [3, 1, 1, 2, 1, 0, 4685, 16, 1, 1, 0, 1, 0, 1, 17, 0]
+2^(22,23) ns: 18  [0, 0, 0, 13, 2, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2^(23,24) ns: 0
+2^(24,25) ns: 1
+2^(25,26) ns: 0
+2^(26,27) ns: 0
+2^(27,28) ns: 0
+2^(28,29) ns: 0
+2^(29,30) ns: 0
+2^(30,32) ns: 0
+Total samples: 499667806
+
+Write:
+2^(00,08) ns: 499603723
+2^(08,09) ns: 2252  [342, 293, 231, 148, 144, 152, 127, 121, 96, 109, 104, 96, 90, 68, 62, 69]
+2^(09,10) ns: 500  [70, 64, 60, 54, 49, 38, 29, 15, 30, 18, 10, 8, 30, 10, 11, 4]
+2^(10,11) ns: 1990  [11, 12, 9, 7, 7, 13, 17, 31, 75, 157, 288, 360, 313, 279, 230, 181]
+2^(11,12) ns: 9503  [232, 320, 363, 490, 679, 845, 999, 1060, 883, 661, 571, 527, 437, 468, 465, 503]
+2^(12,13) ns: 3358  [1112, 828, 605, 324, 196, 88, 62, 41, 20, 18, 10, 15, 18, 7, 11, 3]
+2^(13,14) ns: 47  [11, 3, 5, 7, 2, 4, 3, 3, 1, 2, 1, 0, 3, 0, 1, 1]
+2^(14,15) ns: 21  [2, 2, 4, 1, 2, 2, 0, 2, 1, 0, 0, 1, 1, 3, 0, 0]
+2^(15,16) ns: 11  [1, 4, 2, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+2^(16,17) ns: 18  [2, 2, 1, 1, 0, 1, 2, 3, 1, 2, 1, 0, 0, 0, 0, 2]
+2^(17,18) ns: 27  [2, 2, 2, 0, 1, 2, 0, 1, 1, 0, 0, 2, 0, 3, 2, 9]
+2^(18,19) ns: 54  [9, 9, 2, 0, 1, 4, 19, 6, 2, 1, 0, 0, 1, 0, 0, 0]
+2^(19,20) ns: 13  [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 1]
+2^(20,21) ns: 31  [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 29, 0]
+2^(21,22) ns: 643  [0, 1, 0, 0, 0, 0, 635, 3, 1, 1, 0, 0, 0, 0, 2, 0]
+2^(22,23) ns: 2  [0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2^(23,24) ns: 1
+2^(24,25) ns: 0
+2^(25,26) ns: 0
+2^(26,27) ns: 0
+2^(27,28) ns: 0
+2^(28,29) ns: 0
+2^(29,30) ns: 0
+2^(30,32) ns: 0
+Total samples: 499622194
+
+
+---------- System memory information ----------
+            free(K) buffer(K) cache(K) active(K) inactv(K) pgpgin   pgpgout    pswpin   pswpout pgmajfaut
+pre-run   : 4828436  4910092     2892        4    70384    319335     12596         0         0       324
+  (delta) :  -49060   -48980        0        0  1639348        48      4864         0         0         0
+mid-run   : 4779376  4861112     2892        4  1709732    319383     17460         0         0       324
+  (delta) :   28280    28880        0        0      540        32      1480         0         0         0
+post-run  : 4807656  4889992     2892        4  1710272    319415     18940         0         0       324
+  (delta) :   73488    73488        0        0   -53248         0         0         0         0         0
+post unmap: 4881144  4963480     2892        4  1657024    319415     18940         0         0       324
